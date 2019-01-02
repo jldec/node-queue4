@@ -1,5 +1,5 @@
 {
-  "name": "queue3",
+  "name": "queue4",
   "version": "1.0.4",
   "devDependencies": {
     "superagent": "^4.1.0",
@@ -13,7 +13,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/visionmedia/node-queue3.git"
+    "url": "https://github.com/jldec/node-queue4.git"
   },
+  "author": "https://github.com/tj/node-queue3",
   "license": "MIT"
 }
