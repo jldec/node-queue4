@@ -3,8 +3,8 @@
 
 Task (function) queue with concurrency / timeout control.
 
-## This is a fork of https://github.com/tj/node-queue3
-I was doing maintenance on some libraries and ran into vulnerabilities reported by npm because of old versions of dependencies in [queue3](https://github.com/tj/node-queue3). Thr original repo is not accepting PRs, so i've published this fork as queue4 on npm.
+## This is a fork of [tj/node-queue3](https://github.com/tj/node-queue3)
+I was doing maintenance on some libraries and ran into vulnerabilities reported by npm because of old versions of dependencies in [queue3](https://github.com/tj/node-queue3).
 
 This fork:
 - bumps versions of debug and superagent
