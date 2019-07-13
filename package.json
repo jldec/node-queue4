@@ -1,9 +1,9 @@
 {
   "name": "queue4",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "devDependencies": {
-    "superagent": "^4.1.0",
-    "tape": "^4.9.2"
+    "superagent": "^5.1.0",
+    "tape": "^4.11.0"
   },
   "dependencies": {
     "debug": "^4.1.1"

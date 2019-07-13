@@ -4,21 +4,24 @@ var Queue = require('./');
 var q = new Queue({ concurrency: 3, timeout: 1000 });
 
 var urls = [
-  'http://google.com',
-  'http://yahoo.com',
-  'http://ign.com',
-  'http://msn.com',
-  'http://hotmail.com',
-  'http://cloudup.com',
-  'http://learnboost.com'
+  'https://google.com',
+  'https://yahoo.com',
+  'https://ign.com',
+  'https://msn.com',
+  'https://hotmail.com',
+  'https://cloudup.com',
+  'https://learnboost.com'
 ];
 
 var id = setInterval(function(){
   urls.forEach(function(url){
     q.push(function(fn){
       console.log('%s', url);
-      request.get(url).then(function(res){
-        console.log('%s -> %s', url, res.status);
+      request.get(url, function(err, res){
+        console.log('%s -> %s %s',
+          url,
+          (res && res.status) || 'no response',
+          (err && err.message) || 'OK');
         fn();
       });
     });
@@ -27,7 +30,7 @@ var id = setInterval(function(){
 
 var tid = setInterval(function(){
   console.log('%s queued', q.length);
-}, 500);
+}, 1000);
 
 setTimeout(function(){
   console.log('shutting down');

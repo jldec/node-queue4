@@ -1,5 +1,7 @@
 
 # queue
+[![Azure Build Status](https://dev.azure.com/jldec/node-queue4/_apis/build/status/jldec.node-queue4?branchName=master)](https://dev.azure.com/jldec/node-queue4/_build/latest?definitionId=1&branchName=master)
+[![Travis Build Status](https://api.travis-ci.org/jldec/node-queue4.svg?branch=master)](https://travis-ci.org/jldec/node-queue4)
 
 Task (function) queue with concurrency / timeout control.
 
@@ -16,6 +18,8 @@ There have been no changes to the module code in index.js.
 
 The version number in pacakage.json was bumped to 1.0.4 since the original [queue3 on npm](https://www.npmjs.com/package/queue3) reports 1.0.3.
 
+July 13, 2019: bumped to 1.0.5 with updated deps and example, and CI
+
 ## Installation
 
     $ npm install queue4
@@ -25,28 +29,43 @@ The version number in pacakage.json was bumped to 1.0.4 since the original [queu
 ```js
 
 var request = require('superagent');
-var Queue = require('queue4');
-var q = new Queue({ concurrency: 3, timeout: 3000 });
+var Queue = require('./');
+var q = new Queue({ concurrency: 3, timeout: 1000 });
 
 var urls = [
-  'http://google.com',
-  'http://yahoo.com',
-  'http://ign.com',
-  'http://msn.com',
-  'http://hotmail.com',
-  'http://cloudup.com',
-  'http://learnboost.com'
+  'https://google.com',
+  'https://yahoo.com',
+  'https://ign.com',
+  'https://msn.com',
+  'https://hotmail.com',
+  'https://cloudup.com',
+  'https://learnboost.com'
 ];
 
-urls.forEach(function(url){
-  q.push(function(fn){
-    console.log('%s', url);
-    request.get(url).then(function(res){
-      console.log('%s -> %s', url, res.status);
-      fn();
+var id = setInterval(function(){
+  urls.forEach(function(url){
+    q.push(function(fn){
+      console.log('%s', url);
+      request.get(url, function(err, res){
+        console.log('%s -> %s %s',
+          url,
+          (res && res.status) || 'no response',
+          (err && err.message) || 'OK');
+        fn();
+      });
     });
   });
-});
+}, 5000);
+
+var tid = setInterval(function(){
+  console.log('%s queued', q.length);
+}, 1000);
+
+setTimeout(function(){
+  console.log('shutting down');
+  clearInterval(id);
+  clearInterval(tid);
+}, 15000);
 ```
 
 ## License
