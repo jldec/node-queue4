@@ -1,4 +1,4 @@
-var test = require('tape')
+var test = require('tape');
 var Queue = require('..');
 
 test('should process jobs in order', function(t){

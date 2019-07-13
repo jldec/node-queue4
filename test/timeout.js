@@ -1,9 +1,9 @@
-var test = require('tape')
+var test = require('tape');
 var Queue = require('..');
 
 test('should timeout jobs', function(t){
   var q = new Queue({ timeout: 1000 });
-  var calls = [];
+  // var calls = [];
 
   q.push(function(fn){
     setTimeout(function(){
@@ -13,7 +13,7 @@ test('should timeout jobs', function(t){
     t.equal(err.message, 'Timeout of 1000ms exceeded', 'Timeout of 1000ms exceeded');
     t.end();
   });
-})
+});
 
 test('should run subsequent jobs', function(t){
   var q = new Queue({ timeout: 500 });

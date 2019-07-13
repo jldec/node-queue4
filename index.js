@@ -127,5 +127,5 @@ function timeout(fn, ms) {
       clearTimeout(id);
       cb(err, res);
     });
-  }
+  };
 }

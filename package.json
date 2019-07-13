@@ -3,13 +3,15 @@
   "version": "1.0.5",
   "devDependencies": {
     "superagent": "^5.1.0",
-    "tape": "^4.11.0"
+    "tape": "^4.11.0",
+    "eslint": "^6.0.1"
   },
   "dependencies": {
     "debug": "^4.1.1"
   },
   "scripts": {
-    "test": "tape test/*.js"
+    "test": "tape test/*.js",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
