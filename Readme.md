@@ -1,7 +1,6 @@
 
 # queue
-[![Azure Build Status](https://dev.azure.com/jldec/node-queue4/_apis/build/status/jldec.node-queue4?branchName=master)](https://dev.azure.com/jldec/node-queue4/_build/latest?definitionId=1&branchName=master)
-[![Travis Build Status](https://api.travis-ci.org/jldec/node-queue4.svg?branch=master)](https://travis-ci.org/jldec/node-queue4)
+![CI](https://github.com/jldec/node-queue4/workflows/CI/badge.svg)
 
 Task (function) queue with concurrency / timeout control.
 

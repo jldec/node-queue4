@@ -1,17 +1,16 @@
 {
   "name": "queue4",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "devDependencies": {
-    "superagent": "^5.1.0",
-    "tape": "^4.11.0",
-    "eslint": "^6.0.1"
+    "superagent": "^5.2.1",
+    "tape": "^4.13.0",
+    "eslint": "^6.8.0"
   },
   "dependencies": {
     "debug": "^4.1.1"
   },
   "scripts": {
-    "test": "tape test/*.js",
-    "lint": "eslint ."
+    "test": "eslint . && tape test/*.js"
   },
   "repository": {
     "type": "git",
