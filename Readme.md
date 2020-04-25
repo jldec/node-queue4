@@ -18,6 +18,7 @@ There have been no changes to the module code in index.js.
 - The version number in pacakage.json was bumped to 1.0.4 since the original [queue3 on npm](https://www.npmjs.com/package/queue3) reports 1.0.3.
 - July 13, 2019: bumped to 1.0.5 with updated deps and example, and CI
 - Feb 16, 2020: bumped to 1.0.6 with updated deps and CI on github
+- Apr 25, 2020: bumped to 1.0.7 with updated deps
 
 ## Installation
 
