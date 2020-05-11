@@ -4,7 +4,7 @@
   "devDependencies": {
     "superagent": "^5.2.2",
     "tape": "^5.0.0",
-    "eslint": "^6.8.0"
+    "eslint": "^7.0.0"
   },
   "dependencies": {
     "debug": "^4.1.1"
