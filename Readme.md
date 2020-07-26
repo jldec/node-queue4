@@ -1,6 +1,6 @@
 
 # queue
-![CI](https://github.com/jldec/node-queue4/workflows/CI/badge.svg)
+[![CI](https://github.com/jldec/node-queue4/workflows/CI/badge.svg)](https://github.com/jldec/node-queue4/actions)
 
 Task (function) queue with concurrency / timeout control.
 
