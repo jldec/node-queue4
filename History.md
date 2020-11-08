@@ -1,3 +1,8 @@
+More recently
+==================
+
+* only maintenance releases
+
 1.0.4 / 2019-01-02
 ==================
 
