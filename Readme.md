@@ -21,6 +21,7 @@ There have been no changes to the module code in index.js.
 - Apr 25, 2020: bumped to 1.0.7 with updated deps
 - Jul 26, 2020: bumped to 1.0.8 with updated deps
 - Nov 8, 2020: bumped to 1.0.9 with updated deps
+- Jan 16, 2022: bumped to 1.0.10 with updated deps
 
 ## Installation
 
