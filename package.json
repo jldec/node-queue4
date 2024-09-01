@@ -1,10 +1,10 @@
 {
   "name": "queue4",
-  "version": "1.0.10",
+  "version": "1.1.0",
   "devDependencies": {
     "superagent": "^7.0.2",
-    "tape": "^5.4.1",
-    "eslint": "^8.7.0"
+    "tape": "^5.8.1",
+    "eslint": "^8.57.0"
   },
   "dependencies": {
     "debug": "^4.3.3"
